@@ -4,6 +4,7 @@
   "description": "bot to send greeting text when any new member or leaving member",
   "main": "anone.js",
   "scripts": {
+    "dev": "nodemon hululu.js",
     "test": "try"
   },
   "repository": {
@@ -16,6 +17,10 @@
   "license": "ISC",
   "homepage": "https://kankuu.doscom.org",
   "dependencies": {
+    "dotenv": "^6.1.0",
     "telegram-bot-nova": "^2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }

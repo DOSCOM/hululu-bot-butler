@@ -43,6 +43,11 @@ $ npm install
 $ node hululu.js
 ```
 
+for development
+``` bash
+$ npm run dev
+```
+
 ### Note :
 - this bot is running on group as group member, so to make this bot work functionally you must invite this bot to a group as group member.
 - if this bot was on group and not work yet, try to make this bot has a admin previllage. so this bot has access to read chat on your group.

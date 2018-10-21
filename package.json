@@ -17,6 +17,7 @@
   "license": "ISC",
   "homepage": "https://kankuu.doscom.org",
   "dependencies": {
+    "dotenv": "^6.1.0",
     "telegram-bot-nova": "^2.4.1"
   },
   "devDependencies": {

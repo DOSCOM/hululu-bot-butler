@@ -1,7 +1,8 @@
 /**
  * load environment variable from
  */
-const env = require('./env')
+require('dotenv').config()
+const { env } = process
 
 /**
  * @param {require} local_modules
@@ -16,7 +17,7 @@ const TelegramBot = require('telegram-bot-nova')
 /**
  * @define {bot}
  */
-var bot = new TelegramBot(env.token)
+var bot = new TelegramBot(env.TOKEN)
 
 const textToMember = {
   join: function (username) {
@@ -36,9 +37,9 @@ bot.on('command', (chat, date, from, messageId, text, command, commandData) => {
       if (status.Error) {
         log.resMessage('error : ' + status.Error)
       } else {
-        bot.sendText(chat.id, env.started_string)
-        log.resMessage('start by : '+chat.id)  
-        log.resMessage('bot name : '+env.botName)  
+        bot.sendText(chat.id, env.STARTED_STRING)
+        log.resMessage('start by : '+chat.id)
+        log.resMessage('bot name : ' + env.BOTNAME)
       }
     });
     return
@@ -63,4 +64,4 @@ bot.on('groupLeft', (chat, date, leavingUser, messageId, triggeringUser) => {
   return
 })
 
-log.resMessage(env.botName + ' on air')
+log.resMessage(env.BOTNAME + ' on air')
